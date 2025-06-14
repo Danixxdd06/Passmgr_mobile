@@ -3,8 +3,8 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("com.google.gms.google-services")           // ← Añadido para Firebase/Google Sign-In
-    id("dev.flutter.flutter-gradle-plugin")       // ← El plugin de Flutter al final
+    id("com.google.gms.google-services")    // ← Firebase & Google Sign-In
+    id("dev.flutter.flutter-gradle-plugin") // ← Flutter Gradle plugin
 }
 
 android {
@@ -13,10 +13,21 @@ android {
 
     defaultConfig {
         applicationId = "Unicornianos.SI.passmgr_mobile"
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdk         = flutter.minSdkVersion
+        targetSdk      = flutter.targetSdkVersion
+        versionCode    = flutter.versionCode
+        versionName    = flutter.versionName
+    }
+
+    buildTypes {
+        debug {
+            // Si quieres puedes personalizar el debug aquí
+        }
+        release {
+            // Usamos la debug key para que flutter run --release siga funcionando
+            signingConfig = signingConfigs.getByName("debug")
+            isMinifyEnabled = false
+        }
     }
 
     compileOptions {
@@ -26,12 +37,6 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
-    }
-
-    buildTypes {
-        release {
-            signingConfig = signingConfigs.getByName("debug")
-        }
     }
 }
 

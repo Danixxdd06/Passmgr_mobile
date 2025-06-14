@@ -12,7 +12,20 @@
           "package_name": "Unicornianos.SI.passmgr_mobile"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "987146841846-ph2e4nrac9h0bk37ocvd4870nvn59el4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "Unicornianos.SI.passmgr_mobile",
+            "certificate_hash": "95e5eef35759b78005c2b0eda2301b12c310100b"
+          }
+        },
+        {
+          "client_id": "987146841846-lufa748s1i94o0qsirjv0tr3vpldiphr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBzSVF4njqxnGRcsw0wn3sb3fcF357lWcM"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987146841846-lufa748s1i94o0qsirjv0tr3vpldiphr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
